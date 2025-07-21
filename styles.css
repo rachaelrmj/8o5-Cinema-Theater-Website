@@ -92,3 +92,111 @@ header {
     font-weight: bold;
     color: white;
 }
+
+#new-releases {
+    display: grid;
+    width: 65%;
+    margin: auto;
+    background-color: black;
+    justify-content: center;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(6, auto);
+    column-gap: 25px;
+    text-align: center;
+    color: white;
+}
+
+#new-releases p:first-of-type {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+#new-releases p:last-of-type {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding-bottom: 20px;
+    font-size: 18px;
+    color: orange;
+}
+
+#new-releases img {
+     /* format images to fit inside grid and add border */
+    width: 300px;
+    height: 300px;
+    border: 4px dotted white;
+}
+
+#final-destination {
+     /* Movie Release placement in grid */
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#final-destination p:first-of-type {
+    /* Movie Title */
+    grid-column: 1/2;
+    grid-row: 4/5;
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+#final-destination p:last-of-type {
+    /* Movie Length & Rating */
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+#megan2 {
+     /* Movie Release placement in grid */
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#megan2 p:first-of-type {
+    /* Movie Title */
+    grid-column: 2/3;
+    grid-row: 4/5;
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+#megan2 p:last-of-type {
+    /* Movie Length & Rating */
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+
+#sinners {
+    /* Movie Release placement in grid */
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+#sinners p:first-of-type {
+    /* Movie Title */
+    grid-column: 3/4;
+    grid-row: 4/5;
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+#sinners p:last-of-type {
+    /* Movie Length & Rating */
+    grid-column: 3/4;
+    grid-row: 5/6;
+}
+
+.buy {
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buy:hover, .buy:focus {
+    background-color: #5C206C;
+    color: white
+}
