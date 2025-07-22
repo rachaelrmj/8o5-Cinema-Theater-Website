@@ -1,7 +1,51 @@
+/*-------------------------CSS RESET CODE--------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+/*html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u,
+i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+} 
+
+/*HTML5 display-role reset for older browsers */
+/*article, aside, details, figcaption, figure, footer, header, hgroup, menu,
+nav, section {
+    display:block;
+}
+
+body {
+    line-height:1;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content:'';
+    content:none;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}*/
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html { 
+    background-color: #000000;  
 }
 
 h1, h2 {
@@ -10,6 +54,9 @@ h1, h2 {
 
 body {
     width: 1280;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
 }
 
 /* Company Logo, Navigation Menu and Membership Account Access in header bar */
@@ -36,8 +83,7 @@ header {
 }
 
 #menu li {
-    list-style-type: none;
-    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;  
     font-weight: bold;
     font-size: 26px;
 }
@@ -63,19 +109,17 @@ header {
 }
 
 #now-playing {
-    display: grid;
     width: 65%;
+    height: 400px;
+    overflow: hidden;
     margin:auto;
-    grid-template-columns: 1fr 1fr;
-    background-color: orange;
+    position: relative;
+    background-color: #ffffff;
 }
 
-.movie-info {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 35px;
+#now-playing img {
+    width: 100%;
+    height: 400px;
 }
 
 #view-showtimes {
@@ -104,6 +148,7 @@ header {
     column-gap: 25px;
     text-align: center;
     color: white;
+    padding-bottom: 20px;
 }
 
 #new-releases p:first-of-type {
@@ -189,14 +234,37 @@ header {
     grid-row: 5/6;
 }
 
-.buy {
+.view {
     padding: 5px;
     border-radius: 5px;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-.buy:hover, .buy:focus {
+.view:hover, .view:focus {
     background-color: #5C206C;
-    color: white
+    color: white;
+}
+
+#featured-dining {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 40px;
+    background: linear-gradient(to top, #000000 50%, white 50%);
+    width: 65%;
+    margin: auto;
+    font-weight: bold;
+}
+
+#featured-dining p {
+    color:#5C206C;
+    padding-bottom: 10px;
+}
+
+#variety-food {
+    width: 520px;
+}
+
+#food p {
+    color: #ffffff;
+    font-size: 20px;
 }
