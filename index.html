@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="theater.js"></script>
     <title>805 Cinema</title>
 </head>
 <body>
+    <!--Header bar with company logo, navigation menu & members access-->
     <header class="header">
         <h1>805 Cinema</h1>
-        <img src="images\Company Logo\Movie Theater Logo-Trans.png" id="logo" alt="805 Company Logo">
+        <img src="images\Company Logo\Movie Theater Logo1.png" id="logo" alt="805 Company Logo">
         <nav>
             <h2>Main Navigation</h2>               
             <ul>
@@ -29,42 +31,64 @@
         <section id="now-playing">
             <h2>Now Playing</h2>
             <div id="slider">
-                <div class="slide one">
+                <div class="slide">
                     <img src="images/Now Playing/13 Ghosts.jpg" id="ghost" alt="13 Ghosts Movie">
                     <h4>13 Ghosts</h4>
                     <p>Terror has multiplied</p>
                 </div>
 
-                <div class="slide two">
+                <div class="slide">
                     <img src="images/Now Playing/A Goofy Movie.jpg" id="goofy" alt="A Goofy Movie Movie">
                     <h4>A Goofy Movie</h4>
                     <p>It's hard to be cool when your Dad is Goofy</p>
-                </div>  
-                    
-                <div class="slide three">
-                    <img src="images/Now Playing/P.S. I Love You.jpg" alt="P.S. I Love You Movie">              
-                    <h4>P.S. I Love You</h4>
-                    <p>Sometimes there's only one thing left to say</p>
-                </div> 
+                </div>   
 
-                <div class="slide four">
+                <div class="slide">
                     <img src="images/Now Playing/Pay it Forward.jpeg" alt="Pay it Forward Movie">                             
                     <h4>Pay It Forward</h4>
                     <p>Sometimes the simplest idea can make the biggest difference</p>
                 </div> 
 
-                <div class="slide five">
+                <div class="slide">
                     <img src="images/Now Playing/Set it Off.jpg" alt="Set it Off Movie">                            
                     <h4>Set It Off</h4>
                     <p>The only breaks you get are the ones you take</p>
                 </div> 
+
+                <div class="slide">
+                    <img src="images/Now Playing/13 Ghosts.jpg" id="ghost" alt="13 Ghosts Movie">
+                    <h4>13 Ghosts</h4>
+                    <p>Terror has multiplied</p>
+                </div>
             </div>
         </section>
 
+        <!--View Showtimes for movies playing-->
         <section id="view-showtimes">
-            <h3>View Showtimes</h3>
-            <div id="showtimes">
-                <label for="showings">Select</label>
+            <div id="showtime-header">
+                <h3>Find a Movie to Watch</h3>
+            </div>
+            <img src="images\Complimentary Images\png-transparent-movie-time-graphic-film-cinema-logo-film-elements-cdr-food-text.png" id="showtime" alt="It's movie time! logo">
+            <div id="movie-title">
+                <label for="title">Movie Title</label>
+                <select name="title" id="title">
+                    <option value="ghosts">Thirteen Ghosts</option>
+                    <option value="goofy">A Goofy Movie</option>
+                    <option value="pay">Pay It Forward</option>
+                    <option value="set">Set It Off</option>
+                    <option value="final">Final Destination: Bloodlines</option>
+                    <option value="megan">Megan 2.0</option>
+                    <option value="sinners">Sinners</option>
+                </select>
+            </div>
+
+            <div id="movie-date">
+                <label for="movie-day">Date</label>
+                <input type="date" id="movie-day" name="selectedDate">
+            </div>
+
+            <div id="movie-time">
+                <label for="showings">Showtimes</label>
                 <select name="showings" id="showings">
                     <option value="12pm">12:00pm</option>
                     <option value="12pm">3:00pm</option>
@@ -72,47 +96,55 @@
                     <option value="12pm">9:00pm</option>
                 </select>
             </div>
+
+            <img src="images\Complimentary Images\png-transparent-movie-time-graphic-film-cinema-logo-film-elements-cdr-food-text.png" id="showtime2" alt="It's movie time! logo">
+
+            <button id="search" type="button">Search</button>
         </section>
 
+        <section id="movie-information" class="hidden"></section>
+
+        <!--Movies just released in theaters-->
         <section id="new-releases">
-            <p>New Releases</p>
+            <h3>New Releases</h3>
             <p>In a Theatre Near You!</p>
 
             <div id="final-destination">
                 <img src="images/New Releases/Final Destination Bloodlines.jpg" id="final" alt="Final Destination Bloodlines Movie">
                 <p>Final Destination Bloodlines</p>
                 <p>1h 50m | R</p>
-                <button class="view" type="button">Buy Tickets</button>
+                <button class="buy-tickets" type="button">Buy Tickets</button>
             </div>
 
             <div id="megan2">
                 <img src="images\New Releases\Megan2.0.jpg" id="megan" alt="Megan 2.0 Movie"> 
                 <p>Megan 2.0</p> 
                 <p>2h | PG-13</p>
-                <button class="view" type="button">Buy Tickets</button>
+                <button class="buy-tickets" type="button">Buy Tickets</button>
             </div>
 
             <div id="sinners">
                 <img src="images/New Releases/Sinners.jpg" id="sin" alt="Sinners Movie">
                 <p>Sinners</p>
                 <p>2h 17m | R</p>
-                <button class="view" type="button">Buy Tickets</button>
+                <button class="buy-tickets" type="button">Buy Tickets</button>
             </div>
         </section>
 
+        <!--Highlight food items-->
         <section id="featured-dining">
-            <p>Featured Dining</p>
+            <h3>Featured Dining</h3>
 
             <div id="food">
-                <img src="images\Menu Item\Variety.jpg" id="variety-food" alt="Variety of drinks, snacks and food">
-                <p>Description</p>
-                <button class="view" type="button">View Menu</button>
+                <img src="images\Menu Item\Concessions.png" id="variety-food" alt="Variety of drinks, snacks and food">
+                <p>Snack on favorites while enjoying the movie!</p>
+                <button id="view-menu" type="button">Nutritional Information</button>
             </div>
         </section>
-
-        <footer>
-
-        </footer>
     </main>
+
+    <footer>
+        <small>805 Cinema | Copyright 2025</small>
+    </footer>
 </body>
 </html>
