@@ -70,7 +70,7 @@
             </div>
             <img src="images/Complimentary Images/png-transparent-movie-time-graphic-film-cinema-logo-film-elements-cdr-food-text.png" id="showtime" alt="It's movie time! logo">
             <div id="movie-title">
-                <label for="title">Movie Title</label>
+                <label for="title">Movie Title</label><br>
                 <select name="title" id="title">
                     <option value="Thirteen Ghosts">Thirteen Ghosts</option>
                     <option value="A Goofy Movie">A Goofy Movie</option>
@@ -83,13 +83,14 @@
             </div>
 
             <div id="movie-date">
-                <label for="date">Date</label>
-                <input type="date" id="date" name="date" value="2025-08-12" min="2025-08-12" max="2025-08-19">
+                <label for="date">Date</label><br>
+                <input type="date" id="date" name="date" value="2025-08-12" min="2025-08-12">
             </div>
 
             <img src="images/Complimentary Images/png-transparent-movie-time-graphic-film-cinema-logo-film-elements-cdr-food-text.png" id="showtime2" alt="It's movie time! logo">
 
             <button id="search" onclick="searchMovie()" type="button">Search</button>
+            <p>Please Note: Showtimes are only available for current week.</p>
         </section>
 
         <!---Display Movie Data Here-->
@@ -104,23 +105,26 @@
                 <img src="images/New Releases/Final Destination Bloodlines.jpg" id="final" alt="Final Destination Bloodlines Movie">
                 <p>Final Destination Bloodlines</p>
                 <p>1h 50m | R</p>
-                <button class="buy-tickets" type="button">Buy Tickets</button>
+                <button class="buy" type="button">Buy Tickets</button>
             </div>
 
             <div id="megan2">
                 <img src="images/New Releases/Megan2.0.jpg" id="megan" alt="Poster for the movie Megan 2.0"> 
                 <p>Megan 2.0</p> 
                 <p>2h | PG-13</p>
-                <button class="buy-tickets" type="button">Buy Tickets</button>
+                <button class="buy" type="button">Buy Tickets</button>
             </div>
 
             <div id="sinners">
                 <img src="images/New Releases/Sinners.jpg" id="sin" alt="Sinners Movie">
                 <p>Sinners</p>
                 <p>2h 17m | R</p>
-                <button class="buy-tickets" type="button">Buy Tickets</button>
+                <button class="buy" type="button">Buy Tickets</button>
             </div>
         </section>
+
+        <!---Display form to buy movie tickets-->
+        <div id="buy-container"></div>
 
         <!--Highlight food items-->
         <section id="featured-dining">

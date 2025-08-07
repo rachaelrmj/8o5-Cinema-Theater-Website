@@ -184,7 +184,7 @@ nav a:hover, nav a:active, nav a:focus {
     background-color: #5C206C;
     justify-content: space-evenly;
     grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
     text-align: center;
     font-weight: bold;
     color: #ffffff;
@@ -234,6 +234,12 @@ nav a:hover, nav a:active, nav a:focus {
     padding-top: 10px;
 }
 
+#movie-date input, #movie-title select {
+    text-align: center;
+    width: 200px;
+    height: 20px; 
+}
+
 /* Format search button */
 #search {
     grid-column: 2/4;
@@ -242,13 +248,21 @@ nav a:hover, nav a:active, nav a:focus {
     border-radius: 5px;
     font-weight: bold;
     margin-top: 20px;
-    width: 200px;
+    width: 150px;
     height: 30px;
 }
 
 #search:hover {
     background-color: #000000;
     color: #ffffff;
+}
+
+#view-showtimes p {
+    grid-column: 2/4;
+    grid-row: 4/5;
+    color: #ffffff;
+    font-size: 12px;
+    padding-top: 10px;
 }
 
 .close {
@@ -426,13 +440,13 @@ nav a:hover, nav a:active, nav a:focus {
 }
 
 /* Format the "Buy Tickets" buttons under New Releases */
-.buy-tickets {
+.buy {
     padding: 5px;
     border-radius: 5px;
     font-weight: bold;
 }
 
-.buy-tickets:hover, .buy-tickets:focus {
+.buy:hover, .buy:focus {
     background-color: #5C206C;
     color: white;
 }

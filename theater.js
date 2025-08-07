@@ -29,7 +29,7 @@ function searchMovie() {
       <button class="close" onclick="closeSearch()" type="button">Close</button>
     `;
   } else {
-    container.innerHTML = `<p>No showtimes available for ${title} on ${date}.</p>
+    container.innerHTML = `<p>No showtimes available for ${title}.</p>
     <button class="close" onclick="closeSearch()" type="button">Close</button>`;
   }
 
@@ -41,4 +41,31 @@ function searchMovie() {
   });
 }
 
+function closeSearch() {
+  document.getElementById("output").innerHTML = "";
+}
+
+function buyTickets() {
+  let container = document.getElementById("buy-container");
+  container.innerHTML = `
+    <h2>Buy Tickets</h2>
+    <p>Please fill out the form below to purchase tickets.</p>
+    <h3>Buy Tickets</h3>
+    <form id="ticket-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="tickets">Number of Tickets:</label>
+      <input type="number" id="tickets" name="tickets" min="1" max="10" required>
+
+      <button type="submit">Purchase</button>
+    </form> 
+    <button class="close" id="close" type="button">Close</button>
+}
+
 document.getElementById("search").addEventListener("click", searchMovie);
+document.getElementById("close").addEventListener("click", closeSearch);
+document.getElementById("buy").addEventListener("click", buyTickets);
