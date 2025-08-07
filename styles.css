@@ -319,9 +319,16 @@ nav a:hover, nav a:active, nav a:focus {
   max-width: 800px;
   border-radius: 8px;
   overflow-y: auto;
-  max-height: 400px;
+  max-height: auto;
   font-family: Arial, sans-serif;
+  text-align: center;
 }
+
+#output img {
+    width: 200px;
+    height: 300px;
+}
+
 
 /* Style New Releases Container */
 #new-releases {
