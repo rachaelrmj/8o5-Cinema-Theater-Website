@@ -13,9 +13,8 @@
     <!--Header bar with company logo, navigation menu & members access-->
     <header class="header">
         <h1>805 Cinema</h1>
-        <img src="images\Company Logo\Movie Theater Logo1.png" id="logo" alt="805 Company Logo">
-        <nav>
-            <h2>Main Navigation</h2>               
+        <img src="images/Company Logo/Movie Theater Logo1.png" id="logo" alt="805 Company Logo">
+        <nav aria-label="Main navigation">              
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#Movies">Movies</a></li>
@@ -33,7 +32,7 @@
             <h2>Now Playing</h2>
             <div id="slider">
                 <div class="slide">
-                    <img src="images/Now Playing/13 Ghosts.jpg" id="ghost" alt="13 Ghosts Movie">
+                    <img src="images/Now Playing/13 Ghosts.jpg" class="ghost" alt="13 Ghosts Movie">
                     <h4>13 Ghosts</h4>
                     <p>Terror has multiplied</p>
                 </div>
@@ -57,7 +56,7 @@
                 </div> 
 
                 <div class="slide">
-                    <img src="images/Now Playing/13 Ghosts.jpg" id="ghost" alt="13 Ghosts Movie">
+                    <img src="images/Now Playing/13 Ghosts.jpg" class="ghost" alt="13 Ghosts Movie">
                     <h4>13 Ghosts</h4>
                     <p>Terror has multiplied</p>
                 </div>
@@ -69,7 +68,7 @@
             <div id="showtime-header">
                 <h3>Find a Movie to Watch</h3>
             </div>
-            <img src="images\Complimentary Images\png-transparent-movie-time-graphic-film-cinema-logo-film-elements-cdr-food-text.png" id="showtime" alt="It's movie time! logo">
+            <img src="images/Complimentary Images/png-transparent-movie-time-graphic-film-cinema-logo-film-elements-cdr-food-text.png" id="showtime" alt="It's movie time! logo">
             <div id="movie-title">
                 <label for="title">Movie Title</label>
                 <select name="title" id="title">
@@ -84,26 +83,17 @@
             </div>
 
             <div id="movie-date">
-                <label for="movie-day">Date</label>
-                <input type="date" id="movie-day" name="selectedDate">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" value="2025-08-12" min="2025-08-12" max="2025-08-19">
             </div>
 
-            <div id="movie-time">
-                <label for="showings">Showtimes</label>
-                <select name="showings" id="showings">
-                    <option value="12pm">12:00pm</option>
-                    <option value="12pm">3:00pm</option>
-                    <option value="12pm">6:00pm</option>
-                    <option value="12pm">9:00pm</option>
-                </select>
-            </div>
+            <img src="images/Complimentary Images/png-transparent-movie-time-graphic-film-cinema-logo-film-elements-cdr-food-text.png" id="showtime2" alt="It's movie time! logo">
 
-            <img src="images\Complimentary Images\png-transparent-movie-time-graphic-film-cinema-logo-film-elements-cdr-food-text.png" id="showtime2" alt="It's movie time! logo">
-
-            <button id="search" type="button">Search</button>
+            <button id="search" onclick="searchMovie()" type="button">Search</button>
         </section>
 
-        <section id="movie-information" class="hidden"></section>
+        <!---Display Movie Data Here-->
+        <div id="output"></div>
 
         <!--Movies just released in theaters-->
         <section id="new-releases">
@@ -118,7 +108,7 @@
             </div>
 
             <div id="megan2">
-                <img src="images\New Releases\Megan2.0.jpg" id="megan" alt="Megan 2.0 Movie"> 
+                <img src="images/New Releases/Megan2.0.jpg" id="megan" alt="Poster for the movie Megan 2.0"> 
                 <p>Megan 2.0</p> 
                 <p>2h | PG-13</p>
                 <button class="buy-tickets" type="button">Buy Tickets</button>
@@ -137,7 +127,7 @@
             <h3>Featured Dining</h3>
 
             <div id="food">
-                <img src="images\Menu Item\Concessions.png" id="variety-food" alt="Variety of drinks, snacks and food">
+                <img src="images/Menu Item/Concessions.png" id="variety-food" alt="Variety of drinks, snacks and food">
                 <p>Snack on favorites while enjoying the movie!</p>
                 <button id="view-menu" type="button">Nutritional Information</button>
             </div>

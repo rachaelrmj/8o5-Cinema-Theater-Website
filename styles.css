@@ -121,9 +121,10 @@ nav a:hover, nav a:active, nav a:focus {
 #now-playing {
     position: relative;
     margin:auto;
-
+    width: 70%;
+    padding-bottom: 20px;
     height: 500px;
-    overflow: hidden;  
+    overflow: hidden; 
 }
 
 #slider {
@@ -309,6 +310,19 @@ nav a:hover, nav a:active, nav a:focus {
     color: orange;
 }
 
+#output {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 400px;
+  font-family: Arial, sans-serif;
+}
+
 /* Style New Releases Container */
 #new-releases {
     display: grid;
@@ -470,4 +484,25 @@ footer {
 footer small {
     color: #ffffff;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    padding: 10px 0;
+  }
+
+  #now-playing {
+    width: 95%;
+    height: auto;
+  }
 }
