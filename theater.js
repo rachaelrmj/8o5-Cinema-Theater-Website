@@ -14,19 +14,26 @@ function searchMovie() {
 
   if (movie && movie.showtimes?.[date]) {
     container.innerHTML = `
+      
       <h2>${movie.title}</h2>
       <p>Release Date: ${movie.date}</p>
       <p>${movie.duration} | ${movie.rating}</p>
       <p>${movie.description}</p>
       <img src="${movie.poster}" alt="${movie.title} poster">
       <h3>Showtimes</h3>
+      <p>Click on a showtime to view details.</p>
       <ul>
         ${movie.showtimes[date].map(time => `<a href="#view"><li>${time}</li></a>`).join('')}
-      </ul>
+      </ul><br>
+      
+      <button class="close" onclick="closeSearch()" type="button">Close</button>
     `;
   } else {
-    container.innerHTML = `<p>No showtimes available for ${title} on ${date}.</p>`;
+    container.innerHTML = `<p>No showtimes available for ${title} on ${date}.</p>
+    <button class="close" onclick="closeSearch()" type="button">Close</button>`;
   }
+
+  
 })
   .catch(error => {
     console.error("Error fetching movie data:", error);
