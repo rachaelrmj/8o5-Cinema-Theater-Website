@@ -311,8 +311,8 @@ nav a:hover, nav a:active, nav a:focus {
 }
 
 #output {
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
   padding: 1rem;
   margin: 1rem auto;
   width: 90%;
@@ -324,11 +324,45 @@ nav a:hover, nav a:active, nav a:focus {
   text-align: center;
 }
 
-#output img {
-    width: 200px;
-    height: 300px;
+#output h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
+#output p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+#output img {
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+}
+
+#output ul {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+#output li {
+    list-style: none;
+    font-size: 18px;
+    margin: 5px 0;
+    padding: 10px;
+}
+#output li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#output li a:hover {
+    color: orange;
+}
+
+#output li:hover {
+    background-color: #f0f0f0;
+}
 
 /* Style New Releases Container */
 #new-releases {

@@ -15,12 +15,13 @@ function searchMovie() {
   if (movie && movie.showtimes?.[date]) {
     container.innerHTML = `
       <h2>${movie.title}</h2>
+      <p>Release Date: ${movie.date}</p>
       <p>${movie.duration} | ${movie.rating}</p>
-      <img src="${movie.poster}" alt="${movie.title} poster">
       <p>${movie.description}</p>
-      <h3>Showtimes on ${date}:</h3>
+      <img src="${movie.poster}" alt="${movie.title} poster">
+      <h3>Showtimes</h3>
       <ul>
-        ${movie.showtimes[date].map(time => `<li>${time}</li>`).join('')}
+        ${movie.showtimes[date].map(time => `<a href="#view"><li>${time}</li></a>`).join('')}
       </ul>
     `;
   } else {
