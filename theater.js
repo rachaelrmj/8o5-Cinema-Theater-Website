@@ -168,6 +168,7 @@ document.getElementById("accountFormElement").addEventListener("submit", functio
     }
   }
 
+  // Collect form data and store it in an object saving it to localStorage
   let formData = {
     fname: document.getElementById("fname").value,
     lname: document.getElementById("lname").value,
@@ -177,12 +178,12 @@ document.getElementById("accountFormElement").addEventListener("submit", functio
     password: document.getElementById("password").value
   };
 
-  // Store the form data in localStorage
+  // Save the form data to localStorage as a JSON string
   localStorage.setItem("accountFormData", JSON.stringify(formData));
   if (existingData) {
-    alert("Account updated successfully!")
+    alert("Account updated successfully!"); // If the data already exists, alert the user that the account has been updated
   } else {
-    alert("Account created successfully!");
+    alert("Account created successfully!"); // If the data does not exist, alert the user that the account has been created
   }
   // Close the form after saving the data
   closeForm();
