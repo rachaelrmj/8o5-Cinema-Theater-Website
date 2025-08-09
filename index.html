@@ -12,8 +12,9 @@
 <body>
     <!--Header bar with company logo, navigation menu & members access-->
     <header class="header">
-        <h1>805 Cinema</h1>
-        <img src="images/Company Logo/Movie Theater Logo1.png" id="logo" alt="805 Company Logo">
+        <h1>805 Cinema</h1> <!--Company Name-->
+        <img src="images/Company Logo/Movie Theater Logo1.png" id="logo" alt="805 Company Logo"> <!--Company Logo-->
+        <!--Navigation Menu-->
         <nav aria-label="Main navigation">              
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -23,13 +24,14 @@
             </ul>
         </nav>
 
-        <button id="account-btn" onclick="AccountAccess()" type="button"><img src="images/Account/Account Icon.png" id="account" alt="Membership Account Icon"></button>
+        <button id="account-btn" onclick="AccountAccess()" type="button"><img src="images/Account/Account Icon.png" id="account" alt="Membership Account Icon"></button> <!--Account Access Button-->
 
-        <div id="accountForm" class="form-popup">
-            <form class="popup-container" id="accountFormElement">
-                <h2>Join the 8<span>o</span>5 Club!!!</h2>
+        <div id="accountForm" class="form-popup"> <!--Account Form Popup-->
+            <!--Popup Container-->
+            <form class="popup-container" id="acctForm">
+                <h2>Join the 8<span>o</span>5 Club!!!</h2> <!--Form Title-->
 
-                <div id="formFields">
+                <div id="formFields"> <!--Form Fields-->
                     <label for="fname">First Name</label>
                     <input type="text" id="fname" name="fname" required>
                     
@@ -45,19 +47,21 @@
                     </fieldset>
 
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
+                    <input type="username" id="username" name="username" required>
 
                     <label for="password">Password</label>
-                    <input type="text" id="password" name="password" required>
+                    <input type="password" id="password" name="password" required>
 
-                    
-                    <button type="submit" id="submit">Join Now</button>
-                    <button type="button" id="newAccountButton">Create New Account</button>
-                    <button type="button" id="close-btn" onclick="closeForm()">Close</button>
+                    <button type="submit" id="submit">Join Now</button> <!--Submit Button-->
+                    <button type="button" id="newAccountButton">Create New Account</button> <!--Create New Account Button-->
+                    <button type="button" id="resetPasswordButton">Reset Password</button> <!--Reset Password Button-->
+                    <button type="button" id="closeButton" onclick="closeForm()">Close</button> <!--Close Button-->
                 </div>
             </form>
         </div>
     </header>
+
+    <div id="resetPasswordMsg"></div> <!--Message for Reset Password Confirmation-->
         
     <main>
         <!--Movies currently playing in theater-->
@@ -122,7 +126,7 @@
 
             <img src="images/Complimentary Images/png-transparent-movie-time-graphic-film-cinema-logo-film-elements-cdr-food-text.png" id="showtime2" alt="It's movie time! logo">
 
-            <button id="search" onclick="searchMovie()" type="button">Search</button>
+            <button id="search" onclick="searchMovie()" type="button">Search</button> <!--Search Button-->
             <p>Please Note: Showtimes are only available for current week.</p>
         </section>
 
