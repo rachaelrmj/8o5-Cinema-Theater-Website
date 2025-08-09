@@ -189,7 +189,7 @@ fieldset label:last-of-type {
 }
 
 #resetPasswordButton {
-    display: none; /* Initially hidden */
+    display: none; 
     margin-bottom: 10px;
 }
 
