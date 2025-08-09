@@ -106,8 +106,16 @@ function closeSearch() {
   document.getElementById("output").innerHTML = "";
 }
 
+document.getElementById("account-btn").addEventListener("click", function(e) {
+  // Prevent the default action of the button click
+  e.preventDefault();
+  // Open the account form when the account button is clicked
+  AccountAccess();  
+});
+
 // Function to open the account form when account button is clicked
-function openAccountForm() {
+function AccountAccess() {
+  // Display the account form by changing its CSS display property
   document.getElementById("accountForm").style.display = "block";
 }
 

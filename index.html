@@ -23,22 +23,37 @@
             </ul>
         </nav>
 
-        <button id="acccount-btn" onclick="AccountAccess()" type="button"><img src="images/Account/Account Icon.png" id="account" alt="Membership Account Icon"></button>
+        <button id="account-btn" onclick="AccountAccess()" type="button"><img src="images/Account/Account Icon.png" id="account" alt="Membership Account Icon"></button>
 
         <div id="accountForm" class="form-popup">
             <form class="popup-container">
-                <h2>Join the 805 Club!!!</h2>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                <h2>Join the 8<span>0</span>5 Club!!!</h2>
+
+                <div id="formFields">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" required>
                     
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" required>
+
+                    <fieldset>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>  
                     
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" name="phone" required>    
+                    </fieldset>
+
+                    <label for="username">Username:</label>
+                    <input type="username" id="username" name="username" required>
+
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
+
                     
                     <button type="submit" id="submit">Join Now</button>
                     <button type="button" id="close-btn" onclick="closeForm()">Close</button>
+                </div>
             </form>
         </div>
     </header>
