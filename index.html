@@ -26,14 +26,14 @@
         <button id="account-btn" onclick="AccountAccess()" type="button"><img src="images/Account/Account Icon.png" id="account" alt="Membership Account Icon"></button>
 
         <div id="accountForm" class="form-popup">
-            <form class="popup-container">
-                <h2>Join the 8<span>0</span>5 Club!!!</h2>
+            <form class="popup-container" id="accountFormElement">
+                <h2>Join the 8<span>o</span>5 Club!!!</h2>
 
                 <div id="formFields">
-                    <label for="fname">First Name:</label>
+                    <label for="fname">First Name</label>
                     <input type="text" id="fname" name="fname" required>
                     
-                    <label for="lname">Last Name:</label>
+                    <label for="lname">Last Name</label>
                     <input type="text" id="lname" name="lname" required>
 
                     <fieldset>
@@ -44,14 +44,15 @@
                             <input type="tel" id="phone" name="phone" required>    
                     </fieldset>
 
-                    <label for="username">Username:</label>
-                    <input type="username" id="username" name="username" required>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
 
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password</label>
+                    <input type="text" id="password" name="password" required>
 
                     
                     <button type="submit" id="submit">Join Now</button>
+                    <button type="button" id="newAccountButton">Create New Account</button>
                     <button type="button" id="close-btn" onclick="closeForm()">Close</button>
                 </div>
             </form>

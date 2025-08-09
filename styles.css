@@ -130,43 +130,90 @@ nav a:hover, nav a:active, nav a:focus {
   background: #ffffff;
   top: 50%;
   left: 50%;
-  height: 300px;
-  width: 600px;
+  height: auto;
+  width: auto;
   transform: translate(-50%, -50%); 
   padding: 20px;
-  z-index: 9;
+  z-index: 1;
   text-align: center;
   border-radius: 10px;
-}
-
-#formFields {
-    display: flex;
-    flex-direction: column;
 }
 
 .popup-container h2 span {
     color: #5C206C;
 }
 
-.popup-container label, input {
-    padding-bottom: 5px;
-    font-size: 15px;
+#formFields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
-#submit-btn {
+#formFields label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#formFields input {
+    font-size: 15px;
+    width: 300px;
+    border: 2px solid #5C206C;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#formFields input[type="text"] {
+    width: 50%;
+}
+
+#formFields fieldset {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0 20px 0;
+}
+
+fieldset #email, fieldset #phone {
+    margin-left: 10px;
+}
+
+fieldset label:last-of-type {
+    margin-left: 20px;
+}
+
+/* Join club submit button */
+#submit {
     background-color: #5C206C;
     color: #ffffff;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 16px;
-    cursor: pointer;
+    width: 250px
 }
 
+/* Create new account button */
+#newAccountButton {
+    background-color: #5C206C;
+    color: #ffffff;
+    border: none;
+    padding: 5px 20px;
+    font-size: 16px;
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none; /* Initially hidden */
+}
+
+/* Close button for the form */
 #close-btn {
     background-color: #5C206C;
     color: #ffffff;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 10px;
     font-size: 16px;
     cursor: pointer;
 }

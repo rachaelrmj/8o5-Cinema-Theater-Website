@@ -117,9 +117,84 @@ document.getElementById("account-btn").addEventListener("click", function(e) {
 function AccountAccess() {
   // Display the account form by changing its CSS display property
   document.getElementById("accountForm").style.display = "block";
+
+
+  let savedAccountData = JSON.parse(localStorage.getItem("accountFormData"));
+  let submitButton = document.getElementById("submit");
+  let newAccountButton = document.getElementById("newAccountButton");
+
+  if (savedAccountData) {
+    // If there is saved account data, populate the form fields with the saved data
+    document.getElementById("fname").value = savedAccountData.fname || "";
+    document.getElementById("lname").value = savedAccountData.lname || "";
+    document.getElementById("email").value = savedAccountData.email || "";
+    document.getElementById("phone").value = savedAccountData.phone || "";
+    document.getElementById("username").value = savedAccountData.username || "";
+    document.getElementById("password").value = savedAccountData.password || "";
+
+    submitButton.textContent = "Update 8o5 Account"; // Change button text on "Join Club Button" to "Update 8o5 Account"
+    newAccountButton.style.display = "inline-block"; // Show the "New Account" button
+  } else {
+    // If no saved data, set the button text to "Join Club"
+    submitButton.textContent = "Join Now";
+    newAccountButton.style.display = "none"; // Hide the "New Account" button
+  }
 }
+
+document.getElementById("newAccountButton").addEventListener("click", function() {
+  if (confirm("Are you sure you want to create a new account? This will overwrite any existing account data.")) {
+    localStorage.removeItem("accountFormData"); // Clear existing account data from localStorage
+    // If the user confirms, reset the form fields to empty values
+    resetForm();
+    // Hide the "Create New Account" button
+    document.getElementById("newAccountButton").style.display = "none"; 
+    // Change the button text to "Join Now"
+    document.getElementById("submit").textContent = "Join Now"; // Change the button text to "Join Now"
+    alert("You can now create a new account.");
+  }
+});
+
+document.getElementById("accountFormElement").addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent the default form submission behavior
+
+  let existingData = localStorage.getItem("accountFormData");
+
+  if (existingData) {
+    // if for data already exists, confirm if the user wants to update it
+    let update = confirm("Account already exists. Would you like to update it?");
+    if (!update) {
+      alert("Account not updated.");
+      return; // If the user chooses not to update then exit
+    }
+  }
+
+  let formData = {
+    fname: document.getElementById("fname").value,
+    lname: document.getElementById("lname").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    username: document.getElementById("username").value,
+    password: document.getElementById("password").value
+  };
+
+  // Store the form data in localStorage
+  localStorage.setItem("accountFormData", JSON.stringify(formData));
+  if (existingData) {
+    alert("Account updated successfully!")
+  } else {
+    alert("Account created successfully!");
+  }
+  // Close the form after saving the data
+  closeForm();
+});
 
 // Function to close the account form
 function closeForm() {
   document.getElementById("accountForm").style.display = "none";
+  resetForm(); // Reset the form fields when closing the form
+}
+
+function resetForm() {
+  let form = document.querySelector("#accountForm form");
+  form.reset(); // This clears all form inputs to default values
 }
