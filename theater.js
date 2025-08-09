@@ -64,6 +64,7 @@ function buyTickets() {
       <button type="submit">Purchase</button>
     </form> 
     <button class="close" id="close" type="button">Close</button>
+    `
 }
 
 document.getElementById("search").addEventListener("click", searchMovie);
