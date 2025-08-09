@@ -107,12 +107,19 @@ document.getElementById("acctForm").addEventListener("submit", function(e) {
 });
 
 document.getElementById("resetPasswordButton").addEventListener("click", function() {
-  alert("Password reset. Please create a new password.");
+  alert("Please create a new password.");
   passwordAttempts = 0; // Reset the password attempts counter
   document.getElementById("password").disabled = false;
   this.style.display = "none"; // Hide the reset password button
   document.getElementById("message").textContent = "";
   document.getElementById("password").value = ""; // Clear the password field
+
+  let savedAccountData = localStorage.getItem("accountFormData");
+  if (savedAccountData) {
+    let accountData = JSON.parse(savedAccountData);
+    accountData.password = ""; // Clear the password in the saved data
+    localStorage.setItem("accountFormData", JSON.stringify(accountData)); // Save the updated data back to localStorage
+  }
 });
 
 // Function to close the account form
