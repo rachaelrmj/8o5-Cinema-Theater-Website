@@ -22,7 +22,25 @@
                 <li><a href="#Dining">Dining</a></li>    
             </ul>
         </nav>
-        <button id="acccount-btn" onclick="Account()" type="button"><img src="images/Account/Account Icon.png" id="account" alt="Membership Account Icon"></button>
+
+        <button id="acccount-btn" onclick="AccountAccess()" type="button"><img src="images/Account/Account Icon.png" id="account" alt="Membership Account Icon"></button>
+
+        <div id="accountForm" class="form-popup">
+            <form class="popup-container">
+                <h2>Join the 805 Club!!!</h2>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <button type="submit" id="submit">Join Now</button>
+                    <button type="button" id="close-btn" onclick="closeForm()">Close</button>
+            </form>
+        </div>
     </header>
         
     <main>
