@@ -201,6 +201,7 @@ function searchMovie() {
   }
   // set the output container
   let container = document.getElementById("output");
+  container.style.display = "block";
 
   // If the movie is found and has showtimes for the specified date
   if (movie && movie.showtimes && movie.showtimes[date]) {
@@ -244,7 +245,20 @@ document.getElementById("search").addEventListener("click", searchMovie);
 // Function to close the search results
 function closeSearch() {
   document.getElementById("output").innerHTML = "";
+  document.getElementById("output").style.display = "none";
 }
+
+$(".slider").jasCarousel({
+    margin: 0,
+    auto: true,
+    speed: 2000,
+    delay: 6000,
+    slideFrontFace: true,
+    moveOnSlideClick: true,
+    prevText:'Prev',
+    nextText:'Next',
+    navigation: false
+});
 
 $("#dialog").dialog({
   autoOpen: false,

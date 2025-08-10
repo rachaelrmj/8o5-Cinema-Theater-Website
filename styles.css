@@ -25,7 +25,7 @@ header {
     align-items: center;
     padding: 0;
     margin: 0;
-    background: linear-gradient(to bottom, #ffffff, #5C206C, #000000);  
+    background: linear-gradient(to bottom, #ffffff, #5c206c, #000000);  
     height: 131px;
 }
 
@@ -99,7 +99,7 @@ nav a:hover, nav a:active, nav a:focus {
 }
 
 .popup-container h2 span {
-    color: #5C206C;
+    color: #5c206c;
 }
 
 #formFields {
@@ -117,7 +117,7 @@ nav a:hover, nav a:active, nav a:focus {
 #formFields input {
     font-size: 15px;
     width: 300px;
-    border: 2px solid #5C206C;
+    border: 2px solid #5c206c;
     border-radius: 5px;
     text-align: center;
     margin-bottom: 10px;
@@ -144,7 +144,7 @@ fieldset label:last-of-type {
 
 /* Join club submit button */
 #submit {
-    background-color: #5C206C;
+    background-color: #5c206c;
     color: #ffffff;
     border: none;
     padding: 5px 20px;
@@ -156,7 +156,7 @@ fieldset label:last-of-type {
 
 /* Create new account button */
 #newAccountButton {
-    background-color: #5C206C;
+    background-color: #5c206c;
     color: #ffffff;
     border: none;
     padding: 5px 20px;
@@ -168,7 +168,7 @@ fieldset label:last-of-type {
 
 /* Close button and reset for the form */
 #closeButton, #resetPasswordButton {
-    background-color: #5C206C;
+    background-color: #5c206c;
     color: #ffffff;
     border: none;
     padding: 5px 10px;
@@ -182,7 +182,7 @@ fieldset label:last-of-type {
 }
 
 #resetPasswordMsg {
-    color: #5C206C;
+    color: #5c206c;
     font-size: 16px;
     margin-top: 10px;
     text-align: center;
@@ -195,7 +195,7 @@ fieldset label:last-of-type {
 
 
 /* Movies currently playing in theater */
-#now-playing h2 {
+#now-playing h2, #new-releases h2, #featured-dining h2 {
     font-size: 40px;
     text-align: center;
     padding-top: 15px;
@@ -205,7 +205,7 @@ fieldset label:last-of-type {
 
 #now-playing {
     position: relative;
-    margin:auto;
+    margin: auto auto 20px auto;
     width: 70%;
     padding-bottom: 20px;
     height: 500px;
@@ -218,9 +218,8 @@ fieldset label:last-of-type {
     height: 100%;
     animation: slide-in 25s ease-in-out;
     animation-name: image-slider;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; 
 }
-
 
 .slide {
     min-width: 100%;
@@ -228,7 +227,9 @@ fieldset label:last-of-type {
 }
 
 .slide img {
-    width: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 70%;
     height: 100%;
 }
 
@@ -266,8 +267,9 @@ fieldset label:last-of-type {
 #view-showtimes {
     display: grid;
     margin: auto;
+    width: 70%;
     padding: 5px 10px 5px 10px;
-    background-color: #5C206C;
+    background-color: #5c206c;
     justify-content: space-evenly;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(4, auto);
@@ -322,7 +324,7 @@ fieldset label:last-of-type {
 
 #movie-date input, #movie-title select {
     text-align: center;
-    width: 200px;
+    width: 250px;
     height: 20px; 
 }
 
@@ -376,6 +378,7 @@ fieldset label:last-of-type {
   max-height: auto;
   font-family: Arial, sans-serif;
   text-align: center;
+  display: none;
 }
 
 #output h2 {
@@ -417,7 +420,7 @@ fieldset label:last-of-type {
 }
 
 #output a:active, #output a:focus {
-    color: orange;
+    color: #ffa500;
 }
 
 #output li:hover {
@@ -426,129 +429,47 @@ fieldset label:last-of-type {
 
 /* Style New Releases Container */
 #new-releases {
-    display: grid;
-    margin: auto;
-    background-color: black;
-    justify-content: center;
-    grid-template-columns: repeat(3, 300px);
-    grid-template-rows: repeat(6, auto);
-    column-gap: 25px;
+    margin: 0 auto;
     text-align: center;
-    color: white;
-    padding: 0 20px 20px;
-}
-
-/* Format header tag */
-#new-releases h3 {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    font-size: 40px;
-    font-weight: bold;
-    padding-bottom: 5px;
-}
-
-/* Format subheader */
-#new-releases p:first-of-type {
-    grid-column: 2/3;
-    grid-row: 2/3;
+    color: #ffffff;
     padding-bottom: 20px;
-    font-size: 18px;
-    color: orange;
+}
+
+#new-releases h3, #featured-dining h3 {
+    margin-bottom: 20px;
+    color: #ffa500;
 }
 
 /* Format images to fit inside grid and add border */
 #new-releases img {  
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 500px;
     border: 4px dotted white;
-}
-
-#final-destination {
-     /* Movie release placement in grid */
-    grid-column: 1/2;
-    grid-row: 3/4;
-}
-
-#final-destination p:first-of-type {
-    /* Movie title placement in grid */
-    grid-column: 1/2;
-    grid-row: 4/5;
-    font-size: 18px;
-    padding-top: 15px;
-}
-
-#final-destination p:last-of-type {
-    /* Movie length & rating placement in grid */
-    grid-column: 1/2;
-    grid-row: 5/6;
-    padding-bottom: 10px;
-}
-
-#megan2 {
-     /* Movie Release placement in grid */
-    grid-column: 2/3;
-    grid-row: 3/4;
-}
-
-#megan2 p:first-of-type {
-    /* Movie title placement in grid */
-    grid-column: 2/3;
-    grid-row: 4/5;
-    font-size: 18px;
-    padding-top: 15px;
-}
-
-#megan2 p:last-of-type {
-    /* Movie length & rating placement in grid */
-    grid-column: 2/3;
-    grid-row: 5/6;
-    padding-bottom: 10px;
-}
-
-#sinners {
-    /* Movie Release placement in grid */
-    grid-column: 3/4;
-    grid-row: 3/4;
-}
-
-#sinners p:first-of-type {
-    /* Movie title placement in grid */
-    grid-column: 3/4;
-    grid-row: 4/5;
-    font-size: 18px;
-    padding-top: 15px;
-}
-
-#sinners p:last-of-type {
-    /* Movie length & rating placement in grid */
-    grid-column: 3/4;
-    grid-row: 5/6;
-    padding-bottom: 10px;
 }
 
 /* Format food section */
 #featured-dining {
     text-align: center;
-    padding-top: 20px;
     padding-bottom: 20px;
     font-size: 40px;
     width: 70%;
-    margin: auto;
+    margin: 575px auto auto auto;
+
     font-weight: bold;
-    background-color: #5C206C;
+    background-color: #5c206c;
 }
 
 #featured-dining h3 {
-    color:#FFFFFF;
+    color: #ffffff;
     padding-bottom: 10px;
 }
 
 #variety-food {
-    width: 95%;
+    width: 80%;
 }
 
 #food p {
-    color: orange;
+    color: #ffa500;
     font-size: 20px;
 }
 
@@ -559,7 +480,7 @@ fieldset label:last-of-type {
 }
 
 #opener:hover, #opener:focus {
-    background-color: #5C206C;
+    background-color: #5c206c;
     color: white;
 }
 
@@ -586,7 +507,7 @@ fieldset label:last-of-type {
 footer {
     text-align: center;
     height: 30px;
-    background: linear-gradient(to bottom, #000000, #5C206C, #FFFFFF); 
+    background: linear-gradient(to bottom, #000000, #5c206c, #ffffff); 
     padding-top: 15px;
 }
 

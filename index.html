@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://jascarousel.github.io/jascarousel/css/jas-carousel.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="https://jascarousel.github.io/jascarousel/js/jas-carousel.js"></script>
     <script src="theater.js" defer></script>
     <title>805 Cinema</title>
 </head>
@@ -20,9 +23,8 @@
         <nav aria-label="Main navigation">              
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#Movies">Movies</a></li>
-                <li><a href="#Theatres">Theatres</a></li>
-                <li><a href="#Dining">Dining</a></li>    
+                <li><a href="#view-showtimes">Movies</a></li>
+                <li><a href="#featured-dining">Dining</a></li>    
             </ul>
         </nav>
 
@@ -118,6 +120,8 @@
                     <option value="Final Destination: Bloodlines">Final Destination: Bloodlines</option>
                     <option value="Megan 2.0">Megan 2.0</option>
                     <option value="Sinners">Sinners</option>
+                    <option value="I Know What You Did Last Summer">I Know What You Did Last Summer</option>
+                    <option value="Madea's Destination Wedding">Madea's Destination Wedding</option>
                 </select>
             </div>
 
@@ -137,32 +141,53 @@
 
         <!--Movies just released in theaters-->
         <section id="new-releases">
-            <h3>New Releases</h3>
-            <p>In a Theatre Near You!</p>
+            <h2>New Releases</h2>
+            <h3>In a Theatre Near You!<h3>
 
-            <div id="final-destination">
-                <img src="images/New Releases/Final Destination Bloodlines.jpg" id="final" alt="Final Destination Bloodlines Movie">
-                <p>Final Destination Bloodlines</p>
-                <p>1h 50m | R</p>
-            </div>
-
-            <div id="megan2">
-                <img src="images/New Releases/Megan2.0.jpg" id="megan" alt="Poster for the movie Megan 2.0"> 
-                <p>Megan 2.0</p> 
-                <p>2h | PG-13</p>
-            </div>
-
-            <div id="sinners">
-                <img src="images/New Releases/Sinners.jpg" id="sin" alt="Sinners Movie">
-                <p>Sinners</p>
-                <p>2h 17m | R</p>
-            </div>
+            <ul class="slider">
+                <li>            
+                    <div id="sinners">
+                        <img src="images/New Releases/Sinners.jpg" id="sin" alt="Sinners Movie">
+                        <p>Sinners</p>
+                        <p>2h 17m | R</p>
+                    </div>
+                </li>
+                <li>            
+                    <div id="megan2">
+                        <img src="images/New Releases/Megan2.0.jpg" id="megan" alt="Poster for the movie Megan 2.0"> 
+                        <p>Megan 2.0</p> 
+                        <p>2h | PG-13</p>
+                    </div> 
+                </li>
+                <li>            
+                    <div id="final-destination">
+                        <img src="images\Posters\Final_Destination_Bloodlines_(2025)_poster.jpg" id="final" alt="Final Destination Bloodlines Movie">
+                        <p>Final Destination Bloodlines</p>
+                        <p>1h 50m | R</p>
+                    </div>
+                </li>
+                <li>
+                    <div id="madea-destination">
+                        <img src="images\Posters\Madea's_Destination_Wedding_poster.jpg" id="madea" alt="Madea's Destination Wedding Movie">
+                        <p>Madea's Destination Wedding</p>
+                        <p>1h 44m | PG-13</p>
+                    </div>
+                </li>
+                <li>
+                    <div id="last-summer">
+                        <img src="images\Posters\I_Know_What_You_Did_Last_Summer_Teaser_Poster.jpg" id="know" alt="I Know What You Did Last Summer Movie">
+                        <p>I Know What You Did Last Summer</p>
+                        <p>1h 51m | R</p>
+                    </div>
+                </li>
+            </ul>
         </section>
+
+
 
         <!--Highlight food items-->
         <section id="featured-dining">
-            <h3>Featured Dining</h3>
-
+            <h2>Featured Dining</h2>
             <div id="food">
                 <img src="images/Menu Item/Concessions.png" id="variety-food" alt="Variety of drinks, snacks and food">
                 <p>Snack on favorites while enjoying the movie!</p>

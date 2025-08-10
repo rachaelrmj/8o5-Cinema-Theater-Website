@@ -131,6 +131,44 @@
 			"2025-08-18": ["4:00 PM","7:00 PM","10:00 PM"],
 			"2025-08-19": ["10:00 AM","1:00 PM","4:00 PM"]
 		 }	
+		},
+
+		{
+		 "title": "Madea's Destination Wedding",
+		 "description": "Trying to leave their troubled lives behind, twin brothers return to their Mississippi hometown to start again, only to discover that an even greater evil is waiting to welcome them back.",
+		 "poster": "images/Posters/Madea's_Destination_Wedding_poster.jpg",
+		 "rating": "PG-13",
+		 "duration": "1h 44m",
+		 "date": "July 11, 2025",
+		 "showtimes": {
+			"2025-08-12": ["4:00 PM","7:00 PM","10:00 PM"],
+			"2025-08-13": ["10:00 AM","1:00 PM","4:00 PM"],
+			"2025-08-14": ["4:00 PM","7:00 PM","10:00 PM"],
+			"2025-08-15": ["10:00 AM","1:00 PM","4:00 PM"],
+			"2025-08-16": ["4:00 PM","7:00 PM","10:00 PM"],
+			"2025-08-17": ["10:00 AM","1:00 PM","4:00 PM"],
+			"2025-08-18": ["4:00 PM","7:00 PM","10:00 PM"],
+			"2025-08-19": ["10:00 AM","1:00 PM","4:00 PM"]
+		 }	
+		},
+
+				{
+		 "title": "I Know What You Did Last Summer",
+		 "description": "Trying to leave their troubled lives behind, twin brothers return to their Mississippi hometown to start again, only to discover that an even greater evil is waiting to welcome them back.",
+		 "poster": "images/Posters/I_Know_What_You_Did_Last_Summer_Teaser_Poster.jpg",
+		 "rating": "Rated R",
+		 "duration": "1h 51m",
+		 "date": "July 18, 2025",
+		 "showtimes": {
+			"2025-08-12": ["1:00 PM","4:00 PM"],
+			"2025-08-13": ["10:00 AM","7:00 PM"],
+			"2025-08-14": ["1:00 PM","4:00 PM"],
+			"2025-08-15": ["10:00 AM","7:00 PM"],
+			"2025-08-16": ["1:00 PM","4:00 PM"],
+			"2025-08-17": ["10:00 AM","7:00 PM"],
+			"2025-08-18": ["1:00 PM","4:00 PM"],
+			"2025-08-19": ["10:00 AM","7:00 PM"]
+		 }	
 		}
 	]
 }
