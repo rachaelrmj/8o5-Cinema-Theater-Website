@@ -245,3 +245,13 @@ document.getElementById("search").addEventListener("click", searchMovie);
 function closeSearch() {
   document.getElementById("output").innerHTML = "";
 }
+
+$("#dialog").dialog({
+  autoOpen: false,
+  width: 500,
+  height: 430
+});
+
+$("#opener").click(function() {
+  $("#dialog").dialog("open");
+});

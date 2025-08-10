@@ -221,6 +221,7 @@ fieldset label:last-of-type {
     animation-iteration-count: infinite;
 }
 
+
 .slide {
     min-width: 100%;
     height: 100%;
@@ -259,7 +260,7 @@ fieldset label:last-of-type {
     100% { 
         transform: translateX(-400%); 
     }
-}
+} 
 
 /* Look up movie showtimes */
 #view-showtimes {
@@ -551,15 +552,35 @@ fieldset label:last-of-type {
     font-size: 20px;
 }
 
-#view-menu {
+#opener {
     padding: 5px;
     border-radius: 5px;
     font-weight: bold;
 }
 
-#view-menu:hover, #view-menu:focus {
+#opener:hover, #opener:focus {
     background-color: #5C206C;
     color: white;
+}
+
+#munchieDeal {
+    color: #ffffff;
+    background-color: #000000;
+    text-align: center;
+    p:first-of-type {
+        padding-top: 20px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    p:last-of-type {
+        font-size: 10px;
+    }
+
+    img {
+        margin-top: 30px;
+        width: 250px;
+    }
 }
 
 footer {
