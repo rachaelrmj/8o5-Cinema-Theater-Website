@@ -3,6 +3,7 @@
 
 let passwordAttempts = 0;
 let maxPasswordAttempts = 3;
+let passwordReset = false;
 
 document.getElementById("account-btn").addEventListener("click", function(e) {
   // Prevent the default action of the button click
@@ -28,9 +29,9 @@ function AccountAccess() {
     document.getElementById("email").value = savedAccountData.email || "";
     document.getElementById("phone").value = savedAccountData.phone || "";
     document.getElementById("username").value = savedAccountData.username || "";
-    document.getElementById("password").value = savedAccountData.password || "";
+    document.getElementById("password").value = "";
 
-    submitButton.textContent = "Update 8o5 Account"; // Change button text on "Join Club Button" to "Update 8o5 Account"
+    submitButton.textContent = "Log In / Update 8o5 Account"; // Change button text on "Join Club Button" to "Update 8o5 Account"
     newAccountButton.style.display = "inline-block"; // Show the "New Account" button
   } else {
     // If no saved data, set the button text to "Join Club"
@@ -64,7 +65,14 @@ document.getElementById("acctForm").addEventListener("submit", function(e) {
   if (existingData) {
     let savedAccountData = JSON.parse(existingData);
 
-    if (enteredPassword !== savedAccountData.password) {
+    if (passwordReset) {
+      // If the password has been reset and no password is saved, allow the user to set a new password
+      savedAccountData.password = enteredPassword;
+      localStorage.setItem("accountFormData", JSON.stringify(savedAccountData));
+      passwordReset = false; // Reset the password reset flag
+    }
+
+    if (savedAccountData.password !== "" && enteredPassword !== savedAccountData.password) {
       passwordAttempts++;
       if (passwordAttempts >= maxPasswordAttempts) {
         message.textContent = "Maximum password attempts reached. Please reset your password.";
@@ -96,7 +104,7 @@ document.getElementById("acctForm").addEventListener("submit", function(e) {
   localStorage.setItem("accountFormData", JSON.stringify(formData));
   
   if (existingData) {
-    alert("Account updated successfully!"); // If the data already exists, alert the user that the account has been updated
+    alert("Account logged in and updated successfully!"); // If the data already exists, alert the user that the account has been updated
   } else {
     alert("Account created successfully!"); // If the data does not exist, alert the user that the account has been created
   }
@@ -116,9 +124,9 @@ document.getElementById("resetPasswordButton").addEventListener("click", functio
 
   let savedAccountData = localStorage.getItem("accountFormData");
   if (savedAccountData) {
-    let accountData = JSON.parse(savedAccountData);
-    accountData.password = ""; // Clear the password in the saved data
-    localStorage.setItem("accountFormData", JSON.stringify(accountData)); // Save the updated data back to localStorage
+    savedAccountData = JSON.parse(savedAccountData);
+    savedAccountData.password = "";
+    localStorage.setItem("accountFormData", JSON.stringify(savedAccountData));
   }
 });
 
