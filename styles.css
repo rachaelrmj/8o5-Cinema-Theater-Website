@@ -396,7 +396,6 @@ fieldset label:last-of-type {
   max-width: 800px;
   border-radius: 8px;
   overflow-y: auto;
-  max-height: auto;
   font-family: Arial, sans-serif;
   text-align: center;
   display: none;
@@ -513,20 +512,21 @@ fieldset label:last-of-type {
     color: #ffffff;
     background-color: #000000;
     text-align: center;
-    p:first-of-type {
+}
+    
+#munchieDeal p:first-of-type {
         padding-top: 20px;
         font-size: 25px;
         font-weight: bold;
-    }
+}
 
-    p:last-of-type {
+#munchieDeal p:last-of-type {
         font-size: 10px;
-    }
-
-    img {
+}
+ 
+#munchieDeal img {
         margin-top: 30px;
         width: 250px;
-    }
 }
 
 footer {
