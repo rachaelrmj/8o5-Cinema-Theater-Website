@@ -18,7 +18,7 @@
     <!--Header bar with company logo, navigation menu & members access-->
     <header class="header">
         <h1>805 Cinema</h1> <!--Company Name-->
-        <img src="images/Company Logo/Movie Theater Logo1.png" id="logo" alt="805 Company Logo"> <!--Company Logo-->
+        <img src="images/Logo/Movie-Theater-Logo.png" id="logo" alt="805 Company Logo">
         <!--Navigation Menu-->
         <nav aria-label="Main navigation">              
             <ul>
@@ -28,7 +28,7 @@
             </ul>
         </nav>
 
-        <button id="account-btn" onclick="AccountAccess()" type="button"><img src="images/Account/Account Icon.png" id="account" alt="Membership Account Icon"></button> <!--Account Access Button-->
+        <button id="account-btn" onclick="AccountAccess()" type="button"><img src="images/Account/Account-Icon.png" id="account" alt="Membership Account Icon"></button> <!--Account Access Button-->
 
         <div id="accountForm" class="form-popup"> <!--Account Form Popup-->
             <!--Popup Container-->
@@ -51,7 +51,7 @@
                     </fieldset>
 
                     <label for="username">Username</label>
-                    <input type="username" id="username" name="username" required>
+                    <input type="text" id="username" name="username">
 
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" required>
@@ -73,31 +73,31 @@
             <h2>Now Playing</h2>
             <div id="slider">
                 <div class="slide">
-                    <img src="images\Now Playing\13 Ghosts.jpg" class="ghost" alt="13 Ghosts Movie">
+                    <img src="images/Playing/Thir13een-Ghosts.jpg" class="ghost" alt="Thir13een Ghosts Movie">
                     <h4>Thir13een Ghosts</h4>
                     <p>Terror has multiplied</p>
                 </div>
 
                 <div class="slide">
-                    <img src="images\Now Playing\A Goofy Movie.jpg" id="goofy" alt="A Goofy Movie Movie">
+                    <img src="images/Playing/A-Goofy-Movie.jpg" id="goofy" alt="A Goofy Movie Movie">
                     <h4>A Goofy Movie</h4>
                     <p>It's hard to be cool when your Dad is Goofy</p>
                 </div>   
 
                 <div class="slide">
-                    <img src="images\Now Playing\Pay it Forward.jpeg" alt="Pay it Forward Movie">                             
+                    <img src="images/Playing/Pay-it-Forward.jpeg" alt="Pay it Forward Movie">                             
                     <h4>Pay It Forward</h4>
                     <p>Sometimes the simplest idea can make the biggest difference</p>
                 </div> 
 
                 <div class="slide">
-                    <img src="images\Now Playing\Set it Off.jpg" alt="Set it Off Movie">                            
+                    <img src="images/Playing/Set-it-Off.jpg" alt="Set it Off Movie">                            
                     <h4>Set It Off</h4>
                     <p>The only breaks you get are the ones you take</p>
                 </div> 
 
                 <div class="slide">
-                    <img src="images\Now Playing\13 Ghosts.jpg" class="ghost" alt="Thir13een Ghosts Movie">
+                    <img src="images/Playing/Thir13een-Ghosts.jpg" class="ghost" alt="Thir13een Ghosts Movie">
                     <h4>Thir13een Ghosts</h4>
                     <p>Terror has multiplied</p>
                 </div>
@@ -109,7 +109,7 @@
             <div id="showtime-header">
                 <h3>Find a Movie to Watch</h3>
             </div>
-            <img src="images/Complimentary Images/png-transparent-movie-time-graphic-film-cinema-logo-film-elements-cdr-food-text.png" id="showtime" alt="It's movie time! logo">
+            <img src="images/Misc/png-transparent-movie-time-graphic-film-cinema-logo-film-elements-cdr-food-text.png" id="showtime" alt="It's movie time! logo">
             <div id="movie-title">
                 <label for="title">Movie Title</label><br>
                 <select name="title" id="title">
@@ -130,7 +130,7 @@
                 <input type="date" id="date" name="date" value="2025-08-12" min="2025-08-12">
             </div>
 
-            <img src="images/Complimentary Images/png-transparent-movie-time-graphic-film-cinema-logo-film-elements-cdr-food-text.png" id="showtime2" alt="It's movie time! logo">
+            <img src="images/Misc/png-transparent-movie-time-graphic-film-cinema-logo-film-elements-cdr-food-text.png" id="showtime2" alt="It's movie time! logo">
 
             <button id="search" onclick="searchMovie()" type="button">Search</button> <!--Search Button-->
             <button id="trailer" onclick="movieTrailer()" type="button">Movie Trailer</button> <!--Click to see movie trailer-->
@@ -143,40 +143,40 @@
         <!--Movies just released in theaters-->
         <section id="new-releases">
             <h2>New Releases</h2>
-            <h3>In a Theatre Near You!<h3>
+            <p>In a Theatre Near You!<p>
 
             <ul class="slider">
                 <li>            
                     <div id="sinners">
-                        <img src="images\Posters\Sinners_(2025_film)_poster.jpg" id="sin" alt="Sinners Movie">
+                        <img src="images/New/Sinners-(2025-film)-poster.jpg" id="sin" alt="Sinners Movie">
                         <p>Sinners</p>
                         <p>2h 17m | R</p>
                     </div>
                 </li>
                 <li>            
                     <div id="megan2">
-                        <img src="images\Posters\M3GAN_2.0_Official_Poster.jpg" id="megan" alt="Poster for the movie M3gan 2.0"> 
+                        <img src="images/New/M3GAN-2.0-Official-Poster.jpg" id="megan" alt="Poster for the movie M3gan 2.0"> 
                         <p>Megan 2.0</p> 
                         <p>2h | PG-13</p>
                     </div> 
                 </li>
                 <li>            
                     <div id="final-destination">
-                        <img src="images\Posters\Final_Destination_Bloodlines_(2025)_poster.jpg" id="final" alt="Final Destination Bloodlines Movie">
+                        <img src="images/New/Final-Destination-Bloodlines-(2025)-poster.jpg" id="final" alt="Final Destination Bloodlines Movie">
                         <p>Final Destination Bloodlines</p>
                         <p>1h 50m | R</p>
                     </div>
                 </li>
                 <li>
                     <div id="madea-destination">
-                        <img src="images\Posters\Madea's_Destination_Wedding_poster.jpg" id="madea" alt="Madea's Destination Wedding Movie">
+                        <img src="images/New/Madea's-Destination-Wedding-poster.jpg" id="madea" alt="Madea's Destination Wedding Movie">
                         <p>Madea's Destination Wedding</p>
                         <p>1h 42m | PG-13</p>
                     </div>
                 </li>
                 <li>
                     <div id="last-summer">
-                        <img src="images\Posters\I_Know_What_You_Did_Last_Summer_Teaser_Poster.jpg" id="know" alt="I Know What You Did Last Summer Movie">
+                        <img src="images/New/I-Know-What-You-Did-Last-Summer-Teaser-Poster.jpg" id="know" alt="I Know What You Did Last Summer Movie">
                         <p>I Know What You Did Last Summer</p>
                         <p>1h 51m | R</p>
                     </div>
@@ -188,14 +188,14 @@
         <section id="featured-dining">
             <h2>Featured Dining</h2>
             <div id="food">
-                <img src="images/Menu Item/Concessions.png" id="variety-food" alt="Variety of drinks, snacks and food">
+                <img src="images/Menu/Concessions.png" id="variety-food" alt="Variety of drinks, snacks and food">
                 <p>Snack on favorites while enjoying the movie!</p>
                 <button id="opener">See Deal of the Week!</button>
                 <div id="dialog" title="***This Week's Munchie Deal***">
                     <div id="munchieDeal">
                         <p>The $10 Munchie Deal</p>
                         <p>24 oz regular popcorn, 5 oz box of candy and 24 oz regular fountain drink</p>
-                        <img src="images\Menu Item\munchie deal.png" alt="bucket of popcorn, box of candy and cup of soda">
+                        <img src="images/Menu/munchie-deal.png" alt="bucket of popcorn, box of candy and cup of soda">
                     </div>
                 </div>
             </div>
