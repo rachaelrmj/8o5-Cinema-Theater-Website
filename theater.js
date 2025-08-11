@@ -1,26 +1,32 @@
 // Use strict mode to enforce stricter parsing and error handling in JavaScript
 "use strict";
 
+// Assign global variables to elements accessed from HTML
+let accountBtn = document.getElementById("account-btn");
+let accountForm = document.getElementById("accountForm");
+let submitBtn = document.getElementById("submit");
+let newAccountBtn = document.getElementById("newAccountButton");
+let resetPasswordBtn = document.getElementById("resetPasswordButton");
+let message = document.getElementById("message");
+let output = document.getElementById("output");
+let search = document.getElementById("search");
+let trailer = document.getElementById("trailer");
+
 let passwordAttempts = 0;
 let maxPasswordAttempts = 3;
 let passwordReset = false;
 
-document.getElementById("account-btn").addEventListener("click", function(e) {
-  // Prevent the default action of the button click
-  e.preventDefault();
-  // Open the account form when the account button is clicked
-  AccountAccess();  
+// Open form when user clicks account button
+accountBtn.addEventListener("click", function(e) {
+  e.preventDefault(); // Prevent the default action of the button click
+  AccountAccess(); // Open the account form when the account button is clicked
 });
 
 // Function to open the account form when account button is clicked
 function AccountAccess() {
-  // Display the account form by changing its CSS display property
-  document.getElementById("accountForm").style.display = "block";
+  document.getElementById("accountForm").style.display = "block"; // Display the account form by changing its CSS display property
 
-
-  let savedAccountData = JSON.parse(localStorage.getItem("accountFormData"));
-  let submitButton = document.getElementById("submit");
-  let newAccountButton = document.getElementById("newAccountButton");
+  let savedAccountData = JSON.parse(localStorage.getItem("accountFormData"));  // Get stored account data
 
   if (savedAccountData) {
     // If there is saved account data, populate the form fields with the saved data
@@ -31,33 +37,29 @@ function AccountAccess() {
     document.getElementById("username").value = savedAccountData.username || "";
     document.getElementById("password").value = "";
 
-    submitButton.textContent = "Log In / Update 8o5 Account"; // Change button text on "Join Club Button" to "Update 8o5 Account"
-    newAccountButton.style.display = "inline-block"; // Show the "New Account" button
+    submitBtn.textContent = "Log In / Update 8o5 Account"; // Change button text on "Join Club Button" to "Log In / Update 8o5 Account"
+    newAccountBtn.style.display = "inline-block"; // Show the "New Account" button
   } else {
     // If no saved data, set the button text to "Join Club"
-    submitButton.textContent = "Join Now";
-    newAccountButton.style.display = "none"; // Hide the "New Account" button
+    submitBtn.textContent = "Join Now";
+    newAccountBtn.style.display = "none"; // Hide the "New Account" button
   }
 }
 
-document.getElementById("newAccountButton").addEventListener("click", function() {
+// Event handler for "New Account" Button
+newAccountBtn.addEventListener("click", function() {
   if (confirm("Are you sure you want to create a new account? This will overwrite any existing account data.")) {
     localStorage.removeItem("accountFormData"); // Clear existing account data from localStorage
-    // If the user confirms, reset the form fields to empty values
-    resetForm();
-    // Hide the "Create New Account" button
-    document.getElementById("newAccountButton").style.display = "none"; 
-    // Change the button text to "Join Now"
-    document.getElementById("submit").textContent = "Join Now"; // Change the button text to "Join Now"
-    alert("You can now create a new account.");
+    resetForm(); // Reset the form fields to empty values
+    newAccountBtn.style.display = "none"; // Hide the "Create New Account" button
+    submitBtn.textContent = "Join Now"; // Change the button text to "Join Now"
+    alert("Please fill out form, then click Join Now to create an account.");
   }
 });
 
+// Handle form submission when user logs in / updates account or creates new account
 document.getElementById("acctForm").addEventListener("submit", function(e) {
   e.preventDefault(); // Prevent the default form submission behavior
-
-  let message = document.getElementById("message");
-  let resetButton = document.getElementById("resetPasswordButton");
   
   let existingData = localStorage.getItem("accountFormData");
   let enteredPassword = document.getElementById("password").value;
@@ -76,16 +78,15 @@ document.getElementById("acctForm").addEventListener("submit", function(e) {
       passwordAttempts++;
       if (passwordAttempts >= maxPasswordAttempts) {
         message.textContent = "Maximum password attempts reached. Please reset your password.";
-        resetButton.style.display = "inline-block";   
         message.style.color = "red";
-        document.getElementById("password").disabled = true
+        resetPasswordBtn.style.display = "inline-block"; 
+        document.getElementById("password").disabled = true;
   } else {
     message.textContent = `Incorrect password. You have ${maxPasswordAttempts - passwordAttempts} attempts left.`;
     message.style.color = "red";
   }
   return; // Exit the function if the password is incorrect
 } 
-
   passwordAttempts = 0;
   message.textContent = ""; // Clear the message if the password is correct
 }
@@ -109,17 +110,18 @@ document.getElementById("acctForm").addEventListener("submit", function(e) {
     alert("Account created successfully!"); // If the data does not exist, alert the user that the account has been created
   }
   // Close the form after saving the data
-  resetButton.style.display = "none"; // Hide the reset password button
+  resetPasswordBtn.style.display = "none"; // Hide the reset password button
   message.textContent = "";
   closeForm();
 });
 
-document.getElementById("resetPasswordButton").addEventListener("click", function() {
-  alert("Please create a new password.");
+resetPasswordBtn.addEventListener("click", function() {
+  alert("Please enter a new password.");
   passwordAttempts = 0; // Reset the password attempts counter
+  passwordReset = true;
   document.getElementById("password").disabled = false;
   this.style.display = "none"; // Hide the reset password button
-  document.getElementById("message").textContent = "";
+  message.textContent = "";
   document.getElementById("password").value = ""; // Clear the password field
 
   let savedAccountData = localStorage.getItem("accountFormData");
@@ -132,13 +134,12 @@ document.getElementById("resetPasswordButton").addEventListener("click", functio
 
 // Function to close the account form
 function closeForm() {
-  document.getElementById("accountForm").style.display = "none";
+  accountForm.style.display = "none";
   resetForm(); // Reset the form fields when closing the form
 }
 
 function resetForm() {
-  let form = document.querySelector("#accountForm form");
-  form.reset(); // This clears all form inputs to default values
+  accountForm.querySelector("form").reset(); // This clears all form inputs to default values
 }
 
 // Function to search for a movie based on title and date
