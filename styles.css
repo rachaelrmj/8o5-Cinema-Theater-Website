@@ -377,6 +377,16 @@ fieldset label:last-of-type {
     color: #ffffff;
 }
 
+#trailer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#trailer-container .close {
+    align-self: center;
+    width: 40%;
+}
+
 #output {
   background-color: #ffffff;
   color: #000000;

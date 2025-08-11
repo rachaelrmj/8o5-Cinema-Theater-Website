@@ -242,34 +242,6 @@ function searchMovie() {
 // Add event listener to the search button
 document.getElementById("search").addEventListener("click", searchMovie);
 
-// Function to close the search results
-function closeSearch() {
-  document.getElementById("output").innerHTML = "";
-  document.getElementById("output").style.display = "none";
-}
-
-$(".slider").jasCarousel({
-    margin: 0,
-    auto: true,
-    speed: 2000,
-    delay: 6000,
-    slideFrontFace: true,
-    moveOnSlideClick: true,
-    prevText:'Prev',
-    nextText:'Next',
-    navigation: false
-});
-
-$("#dialog").dialog({
-  autoOpen: false,
-  width: 500,
-  height: 430
-});
-
-$("#opener").click(function() {
-  $("#dialog").dialog("open");
-});
-
 function movieTrailer() {
  // Set the title to the value of the title input field
   let title = document.getElementById("title").value;
@@ -329,13 +301,18 @@ function movieTrailer() {
   container.style.display = "block";
 
   // If the movie is found and has showtimes for the specified date
-  if (movie) {
+  if (movie && movie.trailer) {
     // Clear the output container
     let showtimeHtml = "";
     
     let html = `
-      <video src="${movie.trailer}" alt="${movie.title} trailer">
+    <div id="trailer-container">
+      <video id="trailerVideo" controls autoplay>
+      <source src="${movie.trailer}" type="video/mp4">
+      Your browser does not support this video.
+      </video>
       <button class="close" onclick="closeSearch()" type="button">Close</button>
+    </div>
     `;
     // Set the inner HTML of the container to the generated HTML
     container.innerHTML = html;
@@ -343,11 +320,41 @@ function movieTrailer() {
   }
 })
   // Handle errors
-  .catch(error => {
+  .catch(function(error) {
     console.error("Error fetching movie trailer:", error);
     document.getElementById("output").innerHTML = "<p>Error loading movie trailer.</p>";
   });
 }
 
-// Add event listener to the search button
+// Add event listener to the movie trailer button
 document.getElementById("trailer").addEventListener("click", movieTrailer);
+
+// Function to close the search results
+function closeSearch() {
+  document.getElementById("output").innerHTML = "";
+  document.getElementById("output").style.display = "none";
+}
+
+$(".slider").jasCarousel({
+    margin: 0,
+    auto: true,
+    speed: 2000,
+    delay: 6000,
+    slideFrontFace: true,
+    moveOnSlideClick: true,
+    prevText:'Prev',
+    nextText:'Next',
+    navigation: false
+});
+
+$("#dialog").dialog({
+  autoOpen: false,
+  width: 500,
+  height: 430
+});
+
+$("#opener").click(function() {
+  $("#dialog").dialog("open");
+});
+
+
