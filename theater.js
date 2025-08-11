@@ -211,7 +211,7 @@ function searchMovie() {
     for (let i = 0; i < movie.showtimes[date].length; i++) {
       showtimeHtml += `<li>${movie.showtimes[date][i]}</li>`;
     }
-    // Generate the HTML for the movie details and showtimes
+    
     let html = `
       <h2>${movie.title}</h2>
       <p>Release Date: ${movie.date}</p>
@@ -269,3 +269,85 @@ $("#dialog").dialog({
 $("#opener").click(function() {
   $("#dialog").dialog("open");
 });
+
+function movieTrailer() {
+ // Set the title to the value of the title input field
+  let title = document.getElementById("title").value;
+  // Set the URL to the JSON file containing movie data
+  let url = "movie.json";
+
+  let promise = new Promise(function(resolve, reject) {
+  // Fetch the movie data from the JSON file
+  fetch(url)
+  // Parse the response as JSON
+  .then(function(response) {
+    if (!response.ok) {
+      // If the response is not OK, reject the promise with an error message
+      reject("Network response was not ok: " + response.statusText);
+      return;
+    } else {
+      // If the response is OK, resolve the promise with the parsed JSON data
+      return response.json();
+    }
+  })
+  .then(function(data) {
+    // Resolve the promise with the fetched data
+    resolve(data);
+  })
+  .catch(function(error) {
+    // If an error occurs during the fetch or parsing, reject the promise with the error
+    reject("Error fetching movie trailer: " + error);
+  });
+});
+
+  // Return the promise then log the promise to the console
+  promise.then(function(data) {
+  console.log("Fetched data:", data);
+  
+  // Check if data.movies is an array, if not, initialize it as an empty array
+  let movies =[];
+    
+    if (Array.isArray(data.movies)) {
+      movies = data.movies;
+    }
+
+  // Find the movie with the specified title
+  // Set the movie variable to null initially
+  let movie = null;
+  // Loop through the movies array to find the movie with the matching title
+  for (let i = 0; i < movies.length; i++) {
+    // Check if the title matches the movie's title in the array
+    if (movies[i].title === title) {
+      // If a match is found, set the movie variable to the current movie
+      // and break out of the loop
+      movie = movies[i];
+      break;
+    }
+  }
+  // set the output container
+  let container = document.getElementById("output");
+  container.style.display = "block";
+
+  // If the movie is found and has showtimes for the specified date
+  if (movie) {
+    // Clear the output container
+    let showtimeHtml = "";
+    
+    let html = `
+      <video src="${movie.trailer}" alt="${movie.title} trailer">
+      <button class="close" onclick="closeSearch()" type="button">Close</button>
+    `;
+    // Set the inner HTML of the container to the generated HTML
+    container.innerHTML = html;
+
+  }
+})
+  // Handle errors
+  .catch(error => {
+    console.error("Error fetching movie trailer:", error);
+    document.getElementById("output").innerHTML = "<p>Error loading movie trailer.</p>";
+  });
+}
+
+// Add event listener to the search button
+document.getElementById("trailer").addEventListener("click", movieTrailer);

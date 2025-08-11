@@ -330,7 +330,7 @@ fieldset label:last-of-type {
 
 /* Format search button */
 #search {
-    grid-column: 2/4;
+    grid-column: 2/3;
     grid-row: 3/4;
     justify-self: center;
     border-radius: 5px;
@@ -340,7 +340,18 @@ fieldset label:last-of-type {
     height: 30px;
 }
 
-#search:hover {
+#trailer {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    justify-self: center;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 150px;
+    height: 30px;
+}
+
+#search:hover, #trailer:hover {
     background-color: #000000;
     color: #ffffff;
 }
@@ -447,6 +458,10 @@ fieldset label:last-of-type {
     border: 4px dotted white;
 }
 
+.slider p:last-of-type {
+    color: #ffffff;
+}
+
 /* Format food section */
 #featured-dining {
     text-align: center;
@@ -506,7 +521,7 @@ fieldset label:last-of-type {
 
 footer {
     text-align: center;
-    height: 30px;
+    height: 50px;
     background: linear-gradient(to bottom, #000000, #5c206c, #ffffff); 
     padding-top: 15px;
 }

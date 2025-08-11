@@ -1,9 +1,10 @@
 {
 	"movies": [
 		{
-		 "title": "Thirteen Ghosts",
+		 "title": "Thir13een Ghosts",
 		 "description": "A state-of-the-art remake of the classic William Castle horror film about a family that inherits a spectacular old house from an eccentric uncle. There's just one problem: the house seems to have a dangerous agenda all its own.",
-		 "poster": "images/Posters/Thirteen Ghosts Poster.png",
+		 "poster": "images/Posters/Thir13een Ghosts Poster.png",
+		 "trailer": "movie-trailers/Thir13een Ghosts Trailer.mp4",
 		 "rating": "Rated R",
 		 "duration": "1h 28m",
 		 "date": "October 26, 2001",
@@ -15,7 +16,15 @@
 			"2025-08-16": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
 			"2025-08-17": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
 			"2025-08-18": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
-			"2025-08-19": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"]
+			"2025-08-19": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
+			"2025-08-20": ["11:00 AM", "2:00 PM", "5:00 PM"],
+			"2025-08-21": ["5:00 PM", "8:00 PM", "11:00 PM"],
+			"2025-08-22": ["11:00 AM", "2:00 PM", "5:00 PM"],
+			"2025-08-23": ["5:00 PM", "8:00 PM", "11:00 PM"],
+			"2025-08-24": ["11:00 AM", "2:00 PM", "5:00 PM"],
+			"2025-08-25": ["5:00 PM", "8:00 PM", "11:00 PM"],
+			"2025-08-26": ["11:00 AM", "2:00 PM", "5:00 PM"],
+			"2025-08-27": ["5:00 PM", "8:00 PM", "11:00 PM"]
 		 }
 		},
 		
@@ -23,6 +32,7 @@
 		 "title": "A Goofy Movie",
 		 "description": "When Max makes a preposterous promise to a girl he has a crush on, his chances to fulfilling it seem hopeless when he is dragged onto a cross-country trip with his embarrassing father, Goofy.",
 		 "poster": "images/Posters/A Goofy Movie Poster.png",
+		 "trailer": "movie-trailers/A Goofy Movie Trailer.mp4",
 		 "rating": "Rated G",
 		 "duration": "1h 16m",
 		 "date": "April 7, 1995",
@@ -34,7 +44,15 @@
 			"2025-08-16": ["11:00 AM", "2:00 PM", "5:00 PM"],
 			"2025-08-17": ["5:00 PM", "8:00 PM", "11:00 PM"],
 			"2025-08-18": ["11:00 AM", "2:00 PM", "5:00 PM"],
-			"2025-08-19": ["5:00 PM", "8:00 PM", "11:00 PM"]
+			"2025-08-19": ["5:00 PM", "8:00 PM", "11:00 PM"],
+			"2025-08-20": ["1:00 PM","4:00 PM"],
+			"2025-08-21": ["10:00 AM","7:00 PM"],
+			"2025-08-22": ["1:00 PM","4:00 PM"],
+			"2025-08-23": ["10:00 AM","7:00 PM"],
+			"2025-08-24": ["1:00 PM","4:00 PM"],
+			"2025-08-25": ["10:00 AM","7:00 PM"],
+			"2025-08-26": ["1:00 PM","4:00 PM"],
+			"2025-08-27": ["10:00 AM","7:00 PM"]
 		 }
 		},
 		
@@ -42,6 +60,7 @@
 		 "title": "Pay It Forward",
 		 "description": "The story of a social studies teacher who gives an assignment to his junior high school class to think of an idea to change the world for the better, then put it into action. When one young student creates a plan for paying forward favors, he not only affects the life of his struggling single mother, but he sets in motion an unprecedented wave of human kindness which, unbeknownst to him, has blossomed into a profound national phenomenon.",
 		 "poster": "images/Posters/Pay It Forward Poster.png",
+		 "trailer": "movie-trailers/Pay It Forward Trailer.mp4",
 		 "rating": "Rated PG-13",
 		 "duration": "2h 3m",
 		 "date": "October 20, 2000",
@@ -53,7 +72,15 @@
 			"2025-08-16": ["4:00 PM","7:00 PM","10:00 PM"],
 			"2025-08-17": ["10:00 AM","1:00 PM","4:00 PM"],
 			"2025-08-18": ["4:00 PM","7:00 PM","10:00 PM"],
-			"2025-08-19": ["10:00 AM","1:00 PM","4:00 PM"]
+			"2025-08-19": ["10:00 AM","1:00 PM","4:00 PM"],
+			"2025-08-20": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
+			"2025-08-21": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
+			"2025-08-22": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
+			"2025-08-23": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
+			"2025-08-24": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
+			"2025-08-25": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
+			"2025-08-26": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
+			"2025-08-27": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"]
 		 }
 		},
 		
@@ -61,6 +88,7 @@
 		 "title": "Set It Off",
 		 "description": "After being fired from her job as a bank teller, Frankie begins working at a janitorial service with her friends. The women are struggling with their finances, so they decide to start robbing banks.",
 		 "poster": "images/Posters/Set It Off Poster.png",
+		 "trailer": "movie-trailers/Set It Off Trailer.mp4",
 		 "rating": "Rated R",
 		 "duration": "1h 57m",
 		 "date": "November 6, 1996",
@@ -72,7 +100,15 @@
 			"2025-08-16": ["1:00 PM","4:00 PM"],
 			"2025-08-17": ["10:00 AM","7:00 PM"],
 			"2025-08-18": ["1:00 PM","4:00 PM"],
-			"2025-08-19": ["10:00 AM","7:00 PM"]
+			"2025-08-19": ["10:00 AM","7:00 PM"],
+			"2025-08-20": ["4:00 PM","7:00 PM","10:00 PM"],
+			"2025-08-21": ["10:00 AM","1:00 PM","4:00 PM"],
+			"2025-08-22": ["4:00 PM","7:00 PM","10:00 PM"],
+			"2025-08-23": ["10:00 AM","1:00 PM","4:00 PM"],
+			"2025-08-24": ["4:00 PM","7:00 PM","10:00 PM"],
+			"2025-08-25": ["10:00 AM","1:00 PM","4:00 PM"],
+			"2025-08-26": ["4:00 PM","7:00 PM","10:00 PM"],
+			"2025-08-27": ["10:00 AM","1:00 PM","4:00 PM"]
 		 }
 	    },
 		
@@ -80,6 +116,7 @@
 		 "title": "Final Destination: Bloodlines",
 		 "description": "Plagued by a violent and recurring nightmare, a college student heads home to track down the one person who might be able to break the cycle of death and save her family from the grisly demise that inevitably awaits them all.",
 		 "poster": "images/Posters/Final Destination Bloodlines Poster.png",
+		 "trailer": "movie-trailers/Final Destination - Bloodlines Trailer.mp4",
 		 "rating": "Rated R",
 		 "duration": "1h 50m",
 		 "date": "May 16, 2025",
@@ -91,7 +128,15 @@
 			"2025-08-16": ["11:00 AM", "2:00 PM", "5:00 PM"],
 			"2025-08-17": ["5:00 PM", "8:00 PM", "11:00 PM"],
 			"2025-08-18": ["11:00 AM", "2:00 PM", "5:00 PM"],
-			"2025-08-19": ["5:00 PM", "8:00 PM", "11:00 PM"]
+			"2025-08-19": ["5:00 PM", "8:00 PM", "11:00 PM"],
+			"2025-08-20": ["1:00 PM","4:00 PM"],
+			"2025-08-21": ["10:00 AM","7:00 PM"],
+			"2025-08-22": ["1:00 PM","4:00 PM"],
+			"2025-08-23": ["10:00 AM","7:00 PM"],
+			"2025-08-24": ["1:00 PM","4:00 PM"],
+			"2025-08-25": ["10:00 AM","7:00 PM"],
+			"2025-08-26": ["1:00 PM","4:00 PM"],
+			"2025-08-27": ["10:00 AM","7:00 PM"]
 		 }
 		},
 		
@@ -99,6 +144,7 @@
 		 "title": "Megan 2.0",
 		 "description": "Two years after M3GAN, a marvel of artificial intelligence, went rogue and embarked on a murderous rampage, its creator, Gemma, has become an advocate for government oversight of AI. Unbeknownst to her, a defense contractor has created a military-grade weapon known as Amelia, the ultimate infiltration spy.",
 		 "poster": "images/Posters/Megan 2.0 Poster.png",
+		 "trailer": "movie-trailers/Megan 2.0 Trailer.mp4",
 		 "rating": "Rated PG-13",
 		 "duration": "2h",
 		 "date": "June 27, 2025",
@@ -110,7 +156,15 @@
 			"2025-08-16": ["1:00 PM","4:00 PM"],
 			"2025-08-17": ["10:00 AM","7:00 PM"],
 			"2025-08-18": ["1:00 PM","4:00 PM"],
-			"2025-08-19": ["10:00 AM","7:00 PM"]
+			"2025-08-19": ["10:00 AM","7:00 PM"],
+			"2025-08-20": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
+			"2025-08-21": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
+			"2025-08-22": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
+			"2025-08-23": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
+			"2025-08-24": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
+			"2025-08-25": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
+			"2025-08-26": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"],
+			"2025-08-27": ["12:00 PM","3:00 PM", "6:00 PM", "9:00 PM"]
 		 }					
 		},
 		
@@ -118,6 +172,7 @@
 		 "title": "Sinners",
 		 "description": "Trying to leave their troubled lives behind, twin brothers return to their Mississippi hometown to start again, only to discover that an even greater evil is waiting to welcome them back.",
 		 "poster": "images/Posters/Sinners Poster.png",
+		 "trailer": "movie-trailers/Sinners Trailer.mp4",
 		 "rating": "Rated R",
 		 "duration": "2h 17m",
 		 "date": "April 18, 2025",
@@ -129,16 +184,25 @@
 			"2025-08-16": ["4:00 PM","7:00 PM","10:00 PM"],
 			"2025-08-17": ["10:00 AM","1:00 PM","4:00 PM"],
 			"2025-08-18": ["4:00 PM","7:00 PM","10:00 PM"],
-			"2025-08-19": ["10:00 AM","1:00 PM","4:00 PM"]
+			"2025-08-19": ["10:00 AM","1:00 PM","4:00 PM"],
+			"2025-08-20": ["11:00 AM", "2:00 PM", "5:00 PM"],
+			"2025-08-21": ["5:00 PM", "8:00 PM", "11:00 PM"],
+			"2025-08-22": ["11:00 AM", "2:00 PM", "5:00 PM"],
+			"2025-08-23": ["5:00 PM", "8:00 PM", "11:00 PM"],
+			"2025-08-24": ["11:00 AM", "2:00 PM", "5:00 PM"],
+			"2025-08-25": ["5:00 PM", "8:00 PM", "11:00 PM"],
+			"2025-08-26": ["11:00 AM", "2:00 PM", "5:00 PM"],
+			"2025-08-27": ["5:00 PM", "8:00 PM", "11:00 PM"]		
 		 }	
 		},
 
 		{
 		 "title": "Madea's Destination Wedding",
-		 "description": "Trying to leave their troubled lives behind, twin brothers return to their Mississippi hometown to start again, only to discover that an even greater evil is waiting to welcome them back.",
+		 "description": "Madea and family attend Tiffany's rushed destination wedding in Bahamas. Tensions arise as Tiffany doubts her fiance, Zavier, and her mother acts strangely, raising suspicions about the marriage's legitimacy.",
 		 "poster": "images/Posters/Madea's_Destination_Wedding_poster.jpg",
+		 "trailer": "movie-trailers/Madea's Destination Wedding Trailer.mp4",
 		 "rating": "PG-13",
-		 "duration": "1h 44m",
+		 "duration": "1h 42m",
 		 "date": "July 11, 2025",
 		 "showtimes": {
 			"2025-08-12": ["4:00 PM","7:00 PM","10:00 PM"],
@@ -148,14 +212,23 @@
 			"2025-08-16": ["4:00 PM","7:00 PM","10:00 PM"],
 			"2025-08-17": ["10:00 AM","1:00 PM","4:00 PM"],
 			"2025-08-18": ["4:00 PM","7:00 PM","10:00 PM"],
-			"2025-08-19": ["10:00 AM","1:00 PM","4:00 PM"]
+			"2025-08-19": ["10:00 AM","1:00 PM","4:00 PM"],
+			"2025-08-20": ["1:00 PM","4:00 PM"],
+			"2025-08-21": ["10:00 AM","7:00 PM"],
+			"2025-08-22": ["1:00 PM","4:00 PM"],
+			"2025-08-23": ["10:00 AM","7:00 PM"],
+			"2025-08-24": ["1:00 PM","4:00 PM"],
+			"2025-08-25": ["10:00 AM","7:00 PM"],
+			"2025-08-26": ["1:00 PM","4:00 PM"],
+			"2025-08-27": ["10:00 AM","7:00 PM"]
 		 }	
 		},
 
-				{
+		{
 		 "title": "I Know What You Did Last Summer",
-		 "description": "Trying to leave their troubled lives behind, twin brothers return to their Mississippi hometown to start again, only to discover that an even greater evil is waiting to welcome them back.",
+		 "description": "A group of friends are terrorized by a stalker who knows about a gruesome incident from their past.",
 		 "poster": "images/Posters/I_Know_What_You_Did_Last_Summer_Teaser_Poster.jpg",
+		 "trailer": "movie-trailers/1434659607842-pgv4ql-1750167845637.mp4",
 		 "rating": "Rated R",
 		 "duration": "1h 51m",
 		 "date": "July 18, 2025",
@@ -167,7 +240,15 @@
 			"2025-08-16": ["1:00 PM","4:00 PM"],
 			"2025-08-17": ["10:00 AM","7:00 PM"],
 			"2025-08-18": ["1:00 PM","4:00 PM"],
-			"2025-08-19": ["10:00 AM","7:00 PM"]
+			"2025-08-19": ["10:00 AM","7:00 PM"],
+			"2025-08-20": ["4:00 PM","7:00 PM","10:00 PM"],
+			"2025-08-21": ["10:00 AM","1:00 PM","4:00 PM"],
+			"2025-08-22": ["4:00 PM","7:00 PM","10:00 PM"],
+			"2025-08-23": ["10:00 AM","1:00 PM","4:00 PM"],
+			"2025-08-24": ["4:00 PM","7:00 PM","10:00 PM"],
+			"2025-08-25": ["10:00 AM","1:00 PM","4:00 PM"],
+			"2025-08-26": ["4:00 PM","7:00 PM","10:00 PM"],
+			"2025-08-27": ["10:00 AM","1:00 PM","4:00 PM"]
 		 }	
 		}
 	]
