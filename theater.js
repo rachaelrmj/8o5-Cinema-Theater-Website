@@ -34,7 +34,6 @@ function AccountAccess() {
     document.getElementById("lname").value = savedAccountData.lname || "";
     document.getElementById("email").value = savedAccountData.email || "";
     document.getElementById("phone").value = savedAccountData.phone || "";
-    document.getElementById("username").value = savedAccountData.username || "";
     document.getElementById("password").value = "";
 
     submitBtn.textContent = "Log In / Update 8o5 Account"; // Change button text on "Join Club Button" to "Log In / Update 8o5 Account"
@@ -97,7 +96,6 @@ document.getElementById("acctForm").addEventListener("submit", function(e) {
     lname: document.getElementById("lname").value,
     email: document.getElementById("email").value,
     phone: document.getElementById("phone").value,
-    username: document.getElementById("username").value,
     password: enteredPassword
   };
 
