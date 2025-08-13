@@ -67,6 +67,7 @@
         <!--Movies currently playing in theater-->
         <section id="now-playing">
             <h2>Now Playing</h2>
+            <!--Image Slider-->
             <div id="slider">
                 <div class="slide">
                     <img src="images/Playing/Thir13een-Ghosts.jpg" class="ghost" alt="Thir13een Ghosts Movie">
@@ -108,21 +109,27 @@
             <img src="images/Misc/png-transparent-movie-time-graphic-film-cinema-logo-film-elements-cdr-food-text.png" id="showtime" alt="It's movie time! logo">
             <div id="movie-title">
                 <label for="title">Movie Title</label><br>
+                <!--Movie Title Drop-down-->
                 <select name="title" id="title">
-                    <option value="Thir13een Ghosts">Thir13een Ghosts</option>
-                    <option value="A Goofy Movie">A Goofy Movie</option>
-                    <option value="Pay It Forward">Pay It Forward</option>
-                    <option value="Set It Off">Set It Off</option>
-                    <option value="Final Destination: Bloodlines">Final Destination: Bloodlines</option>
-                    <option value="M3gan 2.0">M3gan 2.0</option>
-                    <option value="Sinners">Sinners</option>
-                    <option value="I Know What You Did Last Summer">I Know What You Did Last Summer</option>
-                    <option value="Madea's Destination Wedding">Madea's Destination Wedding</option>
+                    <optgroup label="Now Playing">
+                        <option value="Thir13een Ghosts">Thir13een Ghosts</option>
+                        <option value="A Goofy Movie">A Goofy Movie</option>
+                        <option value="Pay It Forward">Pay It Forward</option>
+                        <option value="Set It Off">Set It Off</option>
+                    </optgroup>
+                    <optgroup label="New Releases">
+                        <option value="Final Destination: Bloodlines">Final Destination: Bloodlines</option>
+                        <option value="M3gan 2.0">M3gan 2.0</option>
+                        <option value="Sinners">Sinners</option>
+                        <option value="I Know What You Did Last Summer">I Know What You Did Last Summer</option>
+                        <option value="Madea's Destination Wedding">Madea's Destination Wedding</option>
+                    </optgroup>
                 </select>
             </div>
 
             <div id="movie-date">
                 <label for="date">Date</label><br>
+                <!--Movie Date Calendar-->
                 <input type="date" id="date" name="date" value="2025-08-12" min="2025-08-12">
             </div>
 
@@ -133,14 +140,14 @@
             <p>Please Note: Showtimes are only available for current week.</p>
         </section>
 
-        <!---Display Movie Data Here-->
+        <!--Display Movie Data Here-->
         <div id="output"></div>
 
         <!--Movies just released in theaters-->
         <section id="new-releases">
             <h2>New Releases</h2>
             <p>In a Theatre Near You!<p>
-
+            <!--New Release Movie Carousel-->
             <ul class="slider">
                 <li>            
                     <div id="sinners">
@@ -187,6 +194,7 @@
                 <img src="images/Menu/Concessions.png" id="variety-food" alt="Variety of drinks, snacks and food">
                 <p>Snack on favorites while enjoying the movie!</p>
                 <button id="opener">See Deal of the Week!</button>
+                <!--Munchie Deal Dialog Box-->
                 <div id="dialog" title="***This Week's Munchie Deal***">
                     <div id="munchieDeal">
                         <p>The $10 Munchie Deal</p>
@@ -197,7 +205,7 @@
             </div>
         </section>
     </main>
-
+    
     <footer>
         <small>8o5 Cinema | Copyright 2025</small>
     </footer>

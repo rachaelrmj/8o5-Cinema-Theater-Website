@@ -157,7 +157,7 @@ function searchMovie() {
   .then(function(response) {
     if (!response.ok) {
       // If the response is not OK, reject the promise with an error message
-      reject("Network response was not ok: " + response.statusText);
+      reject("Network response error: " + response.statusText);
       return;
     } else {
       // If the response is OK, resolve the promise with the parsed JSON data
@@ -176,7 +176,7 @@ function searchMovie() {
 
   // Return the promise then log the promise to the console
   promise.then(function(data) {
-  console.log("Fetched data:", data);
+  console.log("Movie data fetched:", data);
   
   // Check if data.movies is an array, if not, initialize it as an empty array
   let movies =[];
@@ -334,6 +334,7 @@ function closeSearch() {
   document.getElementById("output").style.display = "none";
 }
 
+// Set options for new release carousel
 $(".slider").jasCarousel({
     margin: 0,
     auto: true,
@@ -346,12 +347,14 @@ $(".slider").jasCarousel({
     navigation: false
 });
 
+// Munchie deal dialog box
 $("#dialog").dialog({
   autoOpen: false,
   width: 500,
   height: 430
 });
 
+// Button to open Munchie Deal dialog box
 $("#opener").click(function() {
   $("#dialog").dialog("open");
 });
