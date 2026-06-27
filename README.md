@@ -24,6 +24,12 @@ The application uses a local JSON file as a simulated backend database, allowing
 
 ---
 
+## Live Demo
+
+Website: https://rachaelrmj.github.io/8o5-Cinema-Theater-Website/
+
+---
+
 ## Features
 
 ### Now Playing Showcase
